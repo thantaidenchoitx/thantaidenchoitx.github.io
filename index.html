@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tool Dự Đoán Tài/Xỉu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="login-box">
+    <input type="text" id="keyInput" placeholder="Nhập key để sử dụng"/>
+    <button onclick="validateKey()">Đăng nhập</button>
+    <p id="login-message"></p>
+  </div>
+
+  <div id="tool-box" style="display:none;">
+    <h3>🔧 Tool Dự Đoán</h3>
+    <div class="row">
+      <input type="text" id="md5" placeholder="Nhập mã MD5" />
+      <button onclick="duDoan()">Dự Đoán</button>
+    </div>
+    <div class="row">
+      <input type="text" id="actual" placeholder="Kết quả T/X" disabled />
+      <button onclick="xacNhanKetQua()">Xác Nhận</button>
+    </div>
+    <div id="result"></div>
+    <div id="historyBox"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+  <script src="js/tool.js"></script>
+</body>
+</html>
