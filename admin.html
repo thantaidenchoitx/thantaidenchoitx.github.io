@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Key Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #111;
+      color: #fff;
+      padding: 20px;
+    }
+    .box {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: none;
+    }
+    button {
+      padding: 10px;
+      width: 49%;
+      margin: 5px 0;
+      border: none;
+      border-radius: 5px;
+      background: #0f0;
+      color: #000;
+      cursor: pointer;
+    }
+    .delete-btn {
+      background: #f00;
+      color: #fff;
+    }
+    .key-list {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>🔑 Quản Lý Key Tool</h2>
+    <input id="keyInput" placeholder="Nhập key..." />
+    <select id="timeSelect">
+      <option value="1">1 Ngày</option>
+      <option value="7">1 Tuần</option>
+      <option value="30">1 Tháng</option>
+      <option value="90">3 Tháng</option>
+      <option value="forever">Vĩnh viễn</option>
+    </select>
+    <button onclick="addKey()">➕ Thêm Key</button>
+    <button class="delete-btn" onclick="deleteKey()">🗑️ Xóa Key</button>
+
+    <div class="key-list" id="keyList"></div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
